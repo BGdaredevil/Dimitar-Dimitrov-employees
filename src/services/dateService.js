@@ -32,6 +32,8 @@ const isOlder = (dateOne, dateTwo) => dateOne.isSameOrBefore(dateTwo);
 
 const isNewer = (dateOne, dateTwo) => dateOne.isSameOrAfter(dateTwo);
 
+const isSame = (dateOne, dateTwo) => dateOne.isSame(dateTwo);
+
 const dateService = {
   strToDate,
   getDuration,
@@ -40,6 +42,7 @@ const dateService = {
   getMax,
   isOlder,
   isNewer,
+  isSame,
 };
 
 export default dateService;

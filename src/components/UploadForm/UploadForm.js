@@ -16,9 +16,9 @@ function UploadForm({ dataSetter }) {
     const reader = new FileReader();
 
     reader.addEventListener("load", () => {
-      console.log(reader.result);
-
-      let { data } = parser.scvToJson(reader.result);
+      let dataStr = reader.result;
+      let cleanDataStr = [...new Set(dataStr.split("\n"))].join("\n");
+      let { data } = parser.scvToJson(cleanDataStr);
 
       let byProject = data.reduce((acc, row) => {
         if (!acc.hasOwnProperty(row["ProjectID"])) {
@@ -115,10 +115,6 @@ function UploadForm({ dataSetter }) {
         .sort((a, b) => b.daysWorked - a.daysWorked);
 
       dataSetter(output);
-      // console.log(data);
-      // console.log(byProject);
-      // console.log(atLeastTwo);
-      // console.log(output);
     });
 
     reader.readAsText(data.infoFile);
