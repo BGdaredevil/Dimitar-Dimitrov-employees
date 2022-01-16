@@ -124,13 +124,13 @@ function UploadForm({ dataSetter }) {
     <div className="container">
       <form onSubmit={submitHandler} encType="multipart/form-data">
         <label htmlFor="infoFile">
-          {hasFile ? `Selected ${fileName}` : "Click to select your scv file"}
+          {hasFile ? `Selected ${fileName}` : "Click to select your .csv file"}
         </label>
         <input
           id="infoFile"
           type="file"
           name="infoFile"
-          accept="scv/*"
+          accept=".csv"
           hidden
           onChange={(e) => {
             setHasFile(true);

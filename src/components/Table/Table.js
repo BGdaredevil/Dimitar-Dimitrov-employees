@@ -10,7 +10,10 @@ function Table({ data }) {
       <table className="table">
         <tbody>
           <tr>
-            <td>It looks like the employees did not form teams during these projects.</td>
+            <td>
+              It looks like the employees did not form teams during these projects. <br />
+              Alternatively your data is missing the headers.
+            </td>
           </tr>
         </tbody>
       </table>
