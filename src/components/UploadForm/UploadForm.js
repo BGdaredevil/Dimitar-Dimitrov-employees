@@ -3,6 +3,8 @@ import { useState } from "react";
 import dateService from "../../services/dateService.js";
 import parser from "../../services/parseService.js";
 
+import "./UploadForm.css";
+
 function UploadForm({ dataSetter }) {
   const [hasFile, setHasFile] = useState(false);
 
@@ -122,10 +124,10 @@ function UploadForm({ dataSetter }) {
   };
 
   return (
-    <form onSubmit={submitHandler} encType="multipart/form-data">
+    <form onSubmit={submitHandler} encType="multipart/form-data" className="container">
       <label htmlFor="infoFile">Upload your file here</label>
       <input type="file" id="infoFile" name="infoFile" onChange={() => setHasFile(true)} />
-      <input type="submit" value="Upload" disabled={!hasFile} />
+      <input type="submit" value="Upload" disabled={!hasFile} className="btn" />
     </form>
   );
 }

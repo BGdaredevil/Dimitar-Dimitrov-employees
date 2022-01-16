@@ -1,0 +1,19 @@
+.container {
+  text-align: left;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+}
+
+.btn {
+  background: transparent;
+  border: 2px solid darkgray;
+  padding: 7px 22px;
+  text-transform: uppercase;
+  color: darkgray;
+  font-weight: bold;
+  margin: 0 15px;
+  cursor: pointer;
+}

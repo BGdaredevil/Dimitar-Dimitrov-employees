@@ -1,3 +1,5 @@
+import "./Table.css";
+
 function Table({ data }) {
   if (data === undefined) {
     return null;
@@ -12,14 +14,14 @@ function Table({ data }) {
   }
 
   return (
-    <div className="table">
-      <table>
+    <div>
+      <table className="table">
         <thead>
           <tr>
-            <td>Employee ID #1</td>
-            <td>Employee ID #2</td>
-            <td>Project ID</td>
-            <td>Days Worked</td>
+            <th>Employee ID #1</th>
+            <th>Employee ID #2</th>
+            <th>Project ID</th>
+            <th>Days Worked</th>
           </tr>
         </thead>
         <tbody>
