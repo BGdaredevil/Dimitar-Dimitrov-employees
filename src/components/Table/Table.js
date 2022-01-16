@@ -7,9 +7,9 @@ function Table({ data }) {
 
   if (data.length === 0) {
     return (
-      <div className="table">
-        <p>Sorry it looks like teams did not form on these projects.</p>
-      </div>
+      <table className="table">
+        <td>It looks like employees did not form teams during these projects.</td>
+      </table>
     );
   }
 

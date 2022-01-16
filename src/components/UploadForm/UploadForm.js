@@ -125,23 +125,25 @@ function UploadForm({ dataSetter }) {
   };
 
   return (
-    <form onSubmit={submitHandler} encType="multipart/form-data" className="container">
-      <label htmlFor="infoFile">
-        {hasFile ? `Selected ${fileName}` : "Click to select your scv file"}
-      </label>
-      <input
-        id="infoFile"
-        type="file"
-        name="infoFile"
-        accept="scv/*"
-        hidden
-        onChange={(e) => {
-          setHasFile(true);
-          setFileName(e.target.value.split("\\").pop());
-        }}
-      />
-      <input type="submit" value="Upload" disabled={!hasFile} className="btn" />
-    </form>
+    <div className="container">
+      <form onSubmit={submitHandler} encType="multipart/form-data">
+        <label htmlFor="infoFile">
+          {hasFile ? `Selected ${fileName}` : "Click to select your scv file"}
+        </label>
+        <input
+          id="infoFile"
+          type="file"
+          name="infoFile"
+          accept="scv/*"
+          hidden
+          onChange={(e) => {
+            setHasFile(true);
+            setFileName(e.target.value.split("\\").pop());
+          }}
+        />
+        <input type="submit" value="Upload" disabled={!hasFile} className="btn" />
+      </form>
+    </div>
   );
 }
 

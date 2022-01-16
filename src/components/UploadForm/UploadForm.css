@@ -4,11 +4,24 @@
   width: 80%;
   margin: 0 auto;
   display: table;
-  padding: 8em 0;
+  padding: 6em 0;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 label[for="infoFile"] {
   cursor: pointer;
+  flex-basis: 100%;
+  padding: 1em 3em;
+}
+
+label[for="infoFile"]:hover {
+  background-color: #2c3446;
 }
 
 .btn {
@@ -20,10 +33,12 @@ label[for="infoFile"] {
   font-weight: bold;
   margin: 0 15px;
   cursor: pointer;
+  padding: 1em 3em;
 }
 
 .btn:disabled {
   border: 2px solid #fb667a;
   color: #fb667a;
   cursor: not-allowed;
+  padding: 1em 3em;
 }
