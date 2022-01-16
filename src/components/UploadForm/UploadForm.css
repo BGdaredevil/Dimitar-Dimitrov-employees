@@ -4,16 +4,26 @@
   width: 80%;
   margin: 0 auto;
   display: table;
-  padding: 0 0 8em 0;
+  padding: 8em 0;
+}
+
+label[for="infoFile"] {
+  cursor: pointer;
 }
 
 .btn {
   background: transparent;
-  border: 2px solid darkgray;
+  border: 2px solid #66fb6d;
   padding: 7px 22px;
   text-transform: uppercase;
-  color: darkgray;
+  color: #66fb6d;
   font-weight: bold;
   margin: 0 15px;
   cursor: pointer;
+}
+
+.btn:disabled {
+  border: 2px solid #fb667a;
+  color: #fb667a;
+  cursor: not-allowed;
 }
